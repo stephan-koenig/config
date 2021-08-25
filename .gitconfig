@@ -1,0 +1,60 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Stephan Koenig
+	email = stephan-koenig@users.noreply.github.com
+	signingkey = 3CCF29BA2CA4E2FD
+[core]
+	editor = subl -n -w
+	excludesfile = /Users/stephan/.gitignore_global
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+[credetial]
+	helper = osxkeychain
+[merge]
+	tool = smerge
+[mergetool "smerge"]
+	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
+[tag]
+	forceSignAnnotated = true
