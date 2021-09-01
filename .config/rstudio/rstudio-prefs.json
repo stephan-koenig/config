@@ -18,8 +18,8 @@
     "warn_if_no_such_variable_in_scope": true,
     "warn_variable_defined_but_not_used": true,
     "style_diagnostics": true,
-    "global_theme": "alternate",
-    "editor_theme": "Monokai",
     "busy_detection": "whitelist",
-    "show_terminal_tab": false
+    "show_terminal_tab": false,
+    "global_theme": "alternate",
+    "editor_theme": "Monokai"
 }
