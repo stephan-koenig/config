@@ -1,0 +1,107 @@
+tap "gromgit/fuse"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "homebrew/test-bot"
+tap "microsoft/git"
+brew "bash"
+brew "icu4c"
+brew "boost"
+brew "libpng"
+brew "freetype"
+brew "gdbm"
+brew "libffi"
+brew "pkg-config"
+brew "cmake"
+brew "coreutils"
+brew "fribidi"
+brew "gcc"
+brew "geos"
+brew "libtiff"
+brew "unixodbc"
+brew "xerces-c"
+brew "gdal"
+brew "gh"
+brew "git"
+brew "git-filter-repo"
+brew "gnupg"
+brew "harfbuzz"
+brew "libgit2"
+brew "libomp"
+brew "libssh"
+brew "llvm"
+brew "make"
+brew "mas"
+brew "nvm"
+brew "optipng"
+brew "pandoc"
+brew "pinentry-mac"
+brew "proj"
+brew "python@3.8"
+brew "rbenv"
+brew "shellcheck"
+brew "texinfo"
+brew "tmux"
+brew "tree"
+brew "udunits"
+brew "wget"
+brew "yadm"
+brew "ykman"
+brew "zsh"
+cask "adobe-creative-cloud"
+cask "bibdesk"
+cask "camtasia"
+cask "discord"
+cask "docker"
+cask "dropbox"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-meslo-lg-nerd-font"
+cask "git-credential-manager-core"
+cask "github"
+cask "google-chrome"
+cask "grammarly"
+cask "hyper"
+cask "iterm2"
+cask "kap"
+cask "launchbar"
+cask "microsoft-teams"
+cask "papers"
+cask "r"
+cask "rstudio"
+cask "skype"
+cask "snagit"
+cask "sublime-merge"
+cask "sublime-text"
+cask "thingsmacsandboxhelper"
+cask "vagrant"
+cask "vagrant-manager"
+cask "virtualbox"
+cask "visual-studio-code"
+cask "xquartz"
+cask "zoom"
+cask "zotero"
+mas "1Password 7", id: 1333542190
+mas "Cardhop", id: 1290358394
+mas "Cursor Pro", id: 1447043133
+mas "Entity Pro", id: 1503988785
+mas "Fantastical", id: 975937182
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Keystroke Pro", id: 1572206224
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
+mas "Pages", id: 409201541
+mas "Slack", id: 803453959
+mas "Spark", id: 1176895641
+mas "Theine", id: 955848755
+mas "Things", id: 904280696
+mas "Tweetbot", id: 1384080005
+mas "Xcode", id: 497799835
