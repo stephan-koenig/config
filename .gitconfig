@@ -5,7 +5,7 @@
 	required = true
 [user]
 	name = Stephan Koenig
-	email = stephan-koenig@users.noreply.github.com
+	email = stephan.koenig@gmail.com
 	signingkey = 3CCF29BA2CA4E2FD
 [core]
 	editor = subl -n -w
