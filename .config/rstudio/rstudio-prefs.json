@@ -20,6 +20,5 @@
     "style_diagnostics": true,
     "busy_detection": "whitelist",
     "show_terminal_tab": false,
-    "global_theme": "alternate",
-    "editor_theme": "Monokai"
+    "editor_theme": "Night Owl {rsthemes}"
 }

@@ -3,5 +3,6 @@
     "lintr::addin_lint_package": "Ctrl+Alt+Shift+L",
     "reprex::reprex_addin": "",
     "reprex::reprex_selection": "Ctrl+Cmd+R",
-    "styler::style_active_file": "Ctrl+Cmd+S"
+    "styler::style_active_file": "Ctrl+Cmd+S",
+    "rsthemes::use_theme_toggle": "Ctrl+Alt+D"
 }
