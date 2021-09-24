@@ -79,7 +79,9 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  rbenv
   zsh-autosuggestions
+  zsh-completions
   zsh-syntax-highlighting
 )
 

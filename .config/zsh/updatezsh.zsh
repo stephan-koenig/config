@@ -4,6 +4,7 @@ updatezsh () {
   dir_array=(
     themes/powerlevel10k
     plugins/zsh-autosuggestions
+    plugins/zsh-completions
     plugins/zsh-syntax-highlighting
   )
   for dir in "${dir_array[@]}"; do
