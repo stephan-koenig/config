@@ -70,7 +70,7 @@ module.exports = {
     padding: '12px 14px',
     
     // window size
-     windowSize: [600, 450],
+    windowSize: [600, 450],
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide

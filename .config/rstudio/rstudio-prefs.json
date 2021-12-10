@@ -18,7 +18,6 @@
     "warn_if_no_such_variable_in_scope": true,
     "warn_variable_defined_but_not_used": true,
     "style_diagnostics": true,
-    "busy_detection": "whitelist",
-    "show_terminal_tab": false,
-    "editor_theme": "Night Owl {rsthemes}"
+    "editor_theme": "Night Owl {rsthemes}",
+    "show_terminal_tab": false
 }

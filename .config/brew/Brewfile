@@ -32,6 +32,7 @@ brew "libgit2"
 brew "libomp"
 brew "libssh"
 brew "llvm"
+brew "lsd"
 brew "make"
 brew "mas"
 brew "nvm"
@@ -41,6 +42,7 @@ brew "pinentry-mac"
 brew "proj"
 brew "python@3.8"
 brew "rbenv"
+brew "rbenv-gemset"
 brew "shellcheck"
 brew "texinfo"
 brew "tmux"
@@ -61,6 +63,7 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-lg-nerd-font"
 cask "git-credential-manager-core"
 cask "github"
+cask "gitkraken"
 cask "google-chrome"
 cask "grammarly"
 cask "hyper"
@@ -84,10 +87,12 @@ cask "xquartz"
 cask "zoom"
 cask "zotero"
 mas "1Password 7", id: 1333542190
+mas "AdBlock", id: 1402042596
 mas "Cardhop", id: 1290358394
 mas "Cursor Pro", id: 1447043133
 mas "Entity Pro", id: 1503988785
 mas "Fantastical", id: 975937182
+mas "Grammarly for Safari", id: 1462114288
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Keystroke Pro", id: 1572206224
@@ -99,8 +104,9 @@ mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
+mas "ReadCube Papers Extension", id: 1543891759
+mas "Save to Pocket", id: 1477385213
 mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
 mas "Theine", id: 955848755
 mas "Things", id: 904280696
 mas "Tweetbot", id: 1384080005
