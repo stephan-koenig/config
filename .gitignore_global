@@ -36,7 +36,15 @@
 ehthumbs.db
 Thumbs.db
 
-# Microsoft Office Temporary Files
+# Microsoft Office Temporary Files #
+####################################
 ~$*.doc*
 ~$*.xls*
 ~$*.ppt*
+
+# R and RStudio #
+#################
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
