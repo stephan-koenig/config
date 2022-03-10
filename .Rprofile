@@ -22,3 +22,6 @@ if (interactive())  {
 	  rsthemes.theme_dark  = "Night Owl {rsthemes}"
 	)
 }
+
+# # Use brew-installed compilers
+# Sys.setenv(PATH = paste("/usr/local/opt", Sys.getenv("PATH"), sep = ":"))
