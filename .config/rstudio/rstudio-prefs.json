@@ -7,7 +7,7 @@
     "remove_history_duplicates": true,
     "load_workspace": false,
     "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.1/Resources/library/learnr/rmarkdown/templates/tutorial",
-    "default_project_location": "~/Documents/GitHub",
+    "default_project_location": "~/Documents",
     "document_author": "Stephan Koenig",
     "rainbow_parentheses": true,
     "initial_working_directory": "~",
@@ -19,6 +19,5 @@
     "warn_variable_defined_but_not_used": true,
     "style_diagnostics": true,
     "editor_theme": "Night Owl {rsthemes}",
-    "new_proj_git_init": true,
-    "new_proj_use_renv": true
+    "new_proj_git_init": true
 }
