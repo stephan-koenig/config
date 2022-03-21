@@ -19,7 +19,8 @@ if (interactive())  {
 	options(
 	  reprex.style         = TRUE,
 	  rsthemes.theme_light = "base16 Unikitty Light {rsthemes}",
-	  rsthemes.theme_dark  = "Night Owl {rsthemes}"
+	  rsthemes.theme_dark  = "Night Owl {rsthemes}",
+	  styler.cache_root = "styler"
 	)
 }
 
