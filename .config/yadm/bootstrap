@@ -2,6 +2,9 @@
 # Setup script for setting up a new macOS machine
 echo 'Starting setup'
 
+# Clone dotfiles
+git clone https://github.com/stephan-koenig/config.git
+
 echo 'Installing command line tools...'
 xcode-select --install
 
@@ -20,7 +23,8 @@ brew bundle
 echo 'Cleaning up Homebrew...'
 brew cleanup
 
-# TODO: yadm
+# yadm setup
+yadm clone https://github.com/stephan-koenig/config.git
 
 # zsh setup
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -43,17 +47,14 @@ curl -sL \
 bash 'Miniconda3.sh'
 rm 'Miniconda3.sh'
 
-echo 'Setting up conda environments...'
-curl -sL \
-  'https://data.qiime2.org/distro/core/qiime2-2020.8-py36-osx-conda.yml' > \
-  'qiime2.yml'
-conda env create -n 'qiime2' --file 'qiime2.yml'
-rm 'qiime2.yml'
+# Create a conda environment
+# echo 'Setting up conda environments...'
+# curl -sL \
+#   'https://data.qiime2.org/distro/core/qiime2-2020.8-py36-osx-conda.yml' > \
+#   'qiime2.yml'
+# conda env create -n 'qiime2' --file 'qiime2.yml'
+# rm 'qiime2.yml'
 
-# TODO: Create new SSH key pairs and copy to destination servers
-# TODO: Establish use of Yubikey authentication with SSH and GPG
-# TODO: GPG keys
 # TODO: R packages
 # TODO: Manual install reminders
-# Globus https://www.globus.org/
 # Poll everywhere https://www.polleverywhere.com/
