@@ -2,9 +2,17 @@
 # Setup script for setting up a new macOS machine
 echo 'Starting setup'
 
-# Clone dotfiles
-git clone https://github.com/stephan-koenig/config.git
+cd $HOME
 
+# yadm setup
+# See bootstrap.yadm.io
+yadm_repo="https://github.com/TheLocehiliosan/yadm"
+yadm_release=${release:-master}
+repo_url="https://github.com/stephan-koenig/config.git"
+
+curl -fsSL "$yadm_repo/raw/$yadm_release/yadm" | bash -s -- "$repo_url"
+
+# Apple command line tools
 echo 'Installing command line tools...'
 xcode-select --install
 
@@ -23,20 +31,16 @@ brew bundle
 echo 'Cleaning up Homebrew...'
 brew cleanup
 
-# yadm setup
-yadm clone https://github.com/stephan-koenig/config.git
-
 # 1Password SSH agent setup
 mkdir -p ~/.1password
 ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
 
 # zsh setup
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
 echo 'Copying configuration and preference files into place...'
 
-# Link zsh configuation files
+# Link zsh configuration files
 for file in "$HOME/.config/zsh/"*; do
   link="${ZSH_CUSTOM}/$(basename "${file}")"
   if [[ ! -f "$link" ]]; then
