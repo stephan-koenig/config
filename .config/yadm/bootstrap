@@ -1,29 +1,25 @@
 #!/usr/bin/env bash
+# curl-pipe remote yadm and bootstrap dotfile repo
+# See bootstrap.yadm.io
+# yadm_repo="https://github.com/TheLocehiliosan/yadm"
+# yadm_release=${release:-master}
+# repo_url="https://github.com/stephan-koenig/config.git"
+
+# curl -fsSL "$yadm_repo/raw/$yadm_release/yadm" | bash -s -- clone "$repo_url" -f
+
 # Setup script for setting up a new macOS machine
 echo 'Starting setup'
 
 cd $HOME
 
-# yadm setup
-# See bootstrap.yadm.io
-yadm_repo="https://github.com/TheLocehiliosan/yadm"
-yadm_release=${release:-master}
-repo_url="https://github.com/stephan-koenig/config.git"
-
-curl -fsSL "$yadm_repo/raw/$yadm_release/yadm" | bash -s -- "$repo_url"
-
-# Apple command line tools
-echo 'Installing command line tools...'
-xcode-select --install
-
-# Install Homebrew if missing
+# Install Homebrew if missing (will also install Xcode command line tools)
 if test ! "$(which brew)"; then
   echo 'Installing Homebrew...'
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo 'Installing Homebrew packages, casks and Mac App Store Apps...'
-brew bundle 
+brew bundle --file=~/.config/brew/Brewfile
 
 # Force links
 # brew link --force <package>
@@ -34,6 +30,12 @@ brew cleanup
 # 1Password SSH agent setup
 mkdir -p ~/.1password
 ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
+
+# GPG setup
+echo 'Importing GPG public key...'
+gpg --auto-key-locate hkps://keys.openpgp.org --locate-keys stephan.koenig@gmail.com
+echo 'You must first trust your key on your YubiKey using "gpg --edit-key <key id>",'
+echo 'then "trust" and "5" (for ultimate) to sign with it.'
 
 # zsh setup
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -64,5 +66,6 @@ rm 'Miniconda3.sh'
 # rm 'qiime2.yml'
 
 # TODO: R packages
+# TODO: Install Quarto
 # TODO: Manual install reminders
 # Poll everywhere https://www.polleverywhere.com/
