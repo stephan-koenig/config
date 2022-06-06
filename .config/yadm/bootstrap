@@ -50,12 +50,8 @@ for file in "$HOME/.config/zsh/"*; do
   fi
 done
 
-echo 'Installing Miniconda...'
-curl -sL \
-  'https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh' > \
-  'Miniconda3.sh'
-bash 'Miniconda3.sh'
-rm 'Miniconda3.sh'
+echo 'Installing R packages and Miniconda...'
+Rscript $HOME/.R/setup_R.R
 
 # Create a conda environment
 # echo 'Setting up conda environments...'
@@ -65,7 +61,6 @@ rm 'Miniconda3.sh'
 # conda env create -n 'qiime2' --file 'qiime2.yml'
 # rm 'qiime2.yml'
 
-# TODO: R packages
 # TODO: Install Quarto
 # TODO: Manual install reminders
 # Poll everywhere https://www.polleverywhere.com/

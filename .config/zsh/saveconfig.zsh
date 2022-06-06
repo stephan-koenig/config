@@ -1,5 +1,4 @@
 alias saveconfig="
   brew bundle dump --force --file=~/.config/brew/Brewfile
+  Rscript "$HOME/.R/save_user_R_packages.R"
 "
-# TODO: conda setup
-# TODO: R packages
