@@ -128,3 +128,8 @@ compinit
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
+
+# 1password-cli
+eval "$(op completion zsh)"
+compdef _op op
+export SSH_AUTH_SOCK=~/.1password/agent.sock
