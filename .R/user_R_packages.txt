@@ -1,3 +1,4 @@
+arrow
 askpass
 assertthat
 backports
@@ -5,15 +6,19 @@ base64enc
 BiocManager
 bit
 bit64
+bitops
 blob
+blogdown
 bookdown
 brew
 brio
 broom
 bslib
+butcher
 cachem
 callr
 cellranger
+checkmate
 cli
 clipr
 colorspace
@@ -39,6 +44,7 @@ evaluate
 fansi
 farver
 fastmap
+filelock
 forcats
 foreach
 fs
@@ -57,6 +63,7 @@ googledrive
 googlesheets4
 gower
 GPfit
+gt
 gtable
 hardhat
 haven
@@ -64,6 +71,7 @@ here
 highr
 hms
 htmltools
+httpuv
 httr
 ids
 infer
@@ -81,6 +89,7 @@ lava
 lhs
 lifecycle
 listenv
+lobstr
 lubridate
 magrittr
 memoise
@@ -95,9 +104,11 @@ parallelly
 parsnip
 patchwork
 pillar
+pins
 pkgbuild
 pkgconfig
 pkgload
+plumber
 plyr
 png
 praise
@@ -106,6 +117,7 @@ pROC
 processx
 prodlim
 progressr
+promises
 ps
 purrr
 quarto
@@ -114,6 +126,7 @@ R.methodsS3
 R.oo
 R.utils
 R6
+rapidoc
 rappdirs
 rcmdcheck
 RColorBrewer
@@ -140,13 +153,16 @@ rvest
 sass
 scales
 selectr
+servr
 sessioninfo
 slider
 snakecase
+sodium
 SQUAREM
 stringi
 stringr
 styler
+swagger
 sys
 testthat
 tibble
@@ -162,10 +178,12 @@ usethis
 utf8
 uuid
 vctrs
+vetiver
 viridisLite
 vroom
 waldo
 warp
+webutils
 whisker
 withr
 workflows

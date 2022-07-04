@@ -133,3 +133,7 @@ gpgconf --launch gpg-agent
 eval "$(op completion zsh)"
 compdef _op op
 export SSH_AUTH_SOCK=~/.1password/agent.sock
+
+# zoxide
+eval "$(zoxide init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
