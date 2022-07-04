@@ -57,3 +57,5 @@
 	program = /usr/local/bin/gpg
 [tag]
 	forceSignAnnotated = true
+[credential "https://learning.github.ubc.ca"]
+	provider = github
