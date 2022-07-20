@@ -37,6 +37,7 @@ dials
 DiceDesign
 diffobj
 digest
+downlit
 dplyr
 dtplyr
 ellipsis
@@ -45,6 +46,7 @@ fansi
 farver
 fastmap
 filelock
+fontawesome
 forcats
 foreach
 fs
@@ -71,6 +73,7 @@ here
 highr
 hms
 htmltools
+htmlwidgets
 httpuv
 httr
 ids
@@ -94,11 +97,13 @@ lubridate
 magrittr
 memoise
 mime
+miniUI
 modeldata
 modelr
 munsell
 numDeriv
 openssl
+packrat
 pak
 parallelly
 parsnip
@@ -107,6 +112,7 @@ pillar
 pins
 pkgbuild
 pkgconfig
+pkgdown
 pkgload
 plumber
 plyr
@@ -116,6 +122,7 @@ prettyunits
 pROC
 processx
 prodlim
+profvis
 progressr
 promises
 ps
@@ -126,6 +133,7 @@ R.methodsS3
 R.oo
 R.utils
 R6
+ragg
 rapidoc
 rappdirs
 rcmdcheck
@@ -146,6 +154,7 @@ rmarkdown
 roxygen2
 rprojroot
 rsample
+rsconnect
 rsthemes
 rstudioapi
 rversions
@@ -155,16 +164,21 @@ scales
 selectr
 servr
 sessioninfo
+shiny
 slider
 snakecase
 sodium
+sourcetools
 SQUAREM
 stringi
 stringr
 styler
 swagger
 sys
+systemfonts
 testthat
+textshaping
+thematic
 tibble
 tidymodels
 tidyr
@@ -174,6 +188,7 @@ timeDate
 tinytex
 tune
 tzdb
+urlchecker
 usethis
 utf8
 uuid
@@ -191,6 +206,7 @@ workflowsets
 xfun
 xml2
 xopen
+xtable
 yaml
 yardstick
 zip
