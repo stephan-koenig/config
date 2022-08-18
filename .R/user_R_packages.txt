@@ -123,6 +123,7 @@ pROC
 processx
 prodlim
 profvis
+progress
 progressr
 promises
 ps
