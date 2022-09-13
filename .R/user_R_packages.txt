@@ -158,6 +158,7 @@ rsample
 rsconnect
 rsthemes
 rstudioapi
+rticles
 rversions
 rvest
 sass
