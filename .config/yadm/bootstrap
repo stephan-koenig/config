@@ -36,6 +36,7 @@ echo 'Importing GPG public key...'
 gpg --auto-key-locate hkps://keys.openpgp.org --locate-keys stephan.koenig@gmail.com
 echo 'You must first trust your key on your YubiKey using "gpg --edit-key <key id>",'
 echo 'then "trust" and "5" (for ultimate) to sign with it.'
+echo 'Ensure the latest "gpg-agent" is running using "gpgconf --kill all".'
 
 # zsh setup
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
