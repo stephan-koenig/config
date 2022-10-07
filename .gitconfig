@@ -30,6 +30,7 @@
 	untracked = cyan
 [push]
 	default = upstream
+	autoSetupRemote = true
 [merge]
 	conflictstyle = diff3
 [credetial]
