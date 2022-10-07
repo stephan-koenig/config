@@ -7,7 +7,7 @@
     "remove_history_duplicates": true,
     "load_workspace": false,
     "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.1/Resources/library/learnr/rmarkdown/templates/tutorial",
-    "default_project_location": "~/Desktop",
+    "default_project_location": "~/Documents/GitHub",
     "document_author": "Stephan Koenig",
     "rainbow_parentheses": true,
     "initial_working_directory": "~",
