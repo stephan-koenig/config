@@ -19,5 +19,7 @@
     "warn_variable_defined_but_not_used": true,
     "style_diagnostics": true,
     "editor_theme": "Night Owl {rsthemes}",
-    "insert_native_pipe_operator": true
+    "insert_native_pipe_operator": true,
+    "new_proj_git_init": true,
+    "new_proj_use_renv": true
 }

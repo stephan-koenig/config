@@ -14,6 +14,7 @@ brew
 brio
 broom
 bslib
+bundle
 butcher
 cachem
 callr
@@ -94,6 +95,7 @@ lifecycle
 listenv
 lobstr
 lubridate
+magick
 magrittr
 memoise
 mime

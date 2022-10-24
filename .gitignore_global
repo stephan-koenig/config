@@ -48,3 +48,7 @@ Thumbs.db
 .Rhistory
 .Rdata
 .httr-oauth
+
+# Dependencies directories #
+############################
+/env/
