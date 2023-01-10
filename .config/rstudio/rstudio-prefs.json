@@ -20,6 +20,6 @@
     "style_diagnostics": true,
     "editor_theme": "Night Owl {rsthemes}",
     "insert_native_pipe_operator": true,
-    "new_proj_git_init": true,
-    "new_proj_use_renv": true
+    "new_proj_use_renv": true,
+    "new_proj_git_init": true
 }
