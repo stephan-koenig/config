@@ -144,6 +144,9 @@ eval "$(zoxide init zsh)"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
+# Use 1Password for CLI tools
+source ~/.config/op/plugins.sh
+
 # Set Homebrew `Brewfile` location
 HOMEBREW_BUNDLE_FILE="${HOME}/brew/Brewfile"
 
