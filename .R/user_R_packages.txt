@@ -25,6 +25,7 @@ callr
 car
 carData
 cellranger
+censored
 checkmate
 chron
 cli
@@ -42,6 +43,7 @@ DBI
 dbplyr
 desc
 devtools
+diagram
 dials
 DiceDesign
 diffobj
@@ -58,6 +60,7 @@ filelock
 fontawesome
 forcats
 foreach
+Formula
 fs
 furrr
 future
@@ -85,9 +88,11 @@ htmltools
 htmlwidgets
 httpuv
 httr
+httr2
 ids
 infer
 ini
+inum
 ipred
 isoband
 iterators
@@ -100,6 +105,7 @@ labeling
 later
 lava
 lhs
+libcoin
 lifecycle
 listenv
 lme4
@@ -109,6 +115,7 @@ magick
 magrittr
 markdown
 MatrixModels
+mboost
 memoise
 mime
 miniUI
@@ -118,7 +125,9 @@ modeldata
 modelenv
 modelr
 munsell
+mvtnorm
 nloptr
+nnls
 numDeriv
 nycflights13
 openssl
@@ -127,6 +136,7 @@ pak
 palmerpenguins
 parallelly
 parsnip
+partykit
 pastecs
 patchwork
 pbkrtest
@@ -153,6 +163,7 @@ ps
 psych
 psychTools
 purrr
+quadprog
 quantreg
 quarto
 R.cache
@@ -168,6 +179,8 @@ RColorBrewer
 Rcpp
 RcppEigen
 RcppTOML
+reactable
+reactR
 readr
 readxl
 recipes
@@ -193,6 +206,7 @@ scales
 selectr
 servr
 sessioninfo
+shape
 shiny
 skimr
 slider
@@ -201,6 +215,7 @@ sodium
 sourcetools
 SparseM
 SQUAREM
+stabs
 stringi
 stringr
 styler
