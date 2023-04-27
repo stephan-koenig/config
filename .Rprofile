@@ -1,13 +1,11 @@
-# # Use RStudio Package Manager (RSPM) specific to OS
-# repo <- switch(
-#   Sys.info()[["sysname"]],
-#   "Linux"   = "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
-#   "https://packagemanager.rstudio.com/all/latest"
-# )
-# options(repos = c(RSPM = repo),
-#         renv.config.repos.override = getOption("repos"),
-#         renv.config.pak.enabled = TRUE)
-# rm(repo)
+# Use Posit Package Manager specific to OS
+repo <- switch(
+  Sys.info()[["sysname"]],
+  Linux = "https://packagemanager.rstudio.com/cran/__linux__/jammy/latest",
+  "https://packagemanager.rstudio.com/cran/latest"
+)
+options(repos = c(CRAN = repo))
+rm(repo)
 
 if (interactive()) {
   suppressMessages(require(devtools))
@@ -22,5 +20,5 @@ if (interactive()) {
 	)
 }
 
-# # Use brew-installed compilers
-# Sys.setenv(PATH = paste("/usr/local/opt", Sys.getenv("PATH"), sep = ":"))
+# Use brew-installed compilers
+Sys.setenv(PATH = paste("/usr/local/opt", Sys.getenv("PATH"), sep = ":"))
