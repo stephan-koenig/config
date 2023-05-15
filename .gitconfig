@@ -6,9 +6,9 @@
 [user]
 	name = Stephan Koenig
 	email = stephan.koenig@gmail.com
-	signingkey = 3CCF29BA2CA4E2FD
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAQpxAxU27JhB5GdDRLLU9Qorp8FLZSOvhBPD2eaMIHS
 [core]
-	editor = subl -n -w
+	editor = code --wait
 	excludesfile = /Users/stephan/.gitignore_global
 [color]
 	ui = auto
@@ -52,6 +52,7 @@
 	gpgsign = true
 [gpg]
 	program = /usr/local/bin/gpg
+	format = ssh
 [tag]
 	forceSignAnnotated = true
 [credential "https://learning.github.ubc.ca"]
@@ -61,3 +62,6 @@
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = ~/.ssh/allowed_signers
