@@ -36,14 +36,13 @@
 [credetial]
 	helper = osxkeychain
 [merge]
-	tool = smerge
-[mergetool "smerge"]
-	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
-	trustExitCode = true
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [diff]
-    tool = vscode
+  tool = vscode
 [difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+  cmd = code --wait --diff $LOCAL $REMOTE
 [pull]
 	ff = only
 [init]
@@ -57,11 +56,6 @@
 	forceSignAnnotated = true
 [credential "https://learning.github.ubc.ca"]
 	provider = github
-[credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 	allowedSignersFile = ~/.ssh/allowed_signers
