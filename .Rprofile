@@ -1,11 +1,14 @@
 # Use Posit Package Manager specific to OS
-repo <- switch(
-  Sys.info()[["sysname"]],
-  Linux = "https://packagemanager.rstudio.com/cran/__linux__/jammy/latest",
-  "https://packagemanager.rstudio.com/cran/latest"
-)
-options(repos = c(CRAN = repo))
-rm(repo)
+local({
+  repo <- switch(
+    Sys.info()[["sysname"]],
+    Linux = "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+    "https://packagemanager.posit.co/cran/latest"
+  )
+  r <- getOption("repos")
+  r["CRAN"] <- repo
+  options(repos = r)
+})
 
 if (interactive()) {
   suppressMessages(require(devtools))
