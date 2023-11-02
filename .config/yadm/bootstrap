@@ -54,14 +54,5 @@ done
 echo 'Installing R packages and Miniconda...'
 Rscript $HOME/.R/setup_R.R
 
-# Create a conda environment
-# echo 'Setting up conda environments...'
-# curl -sL \
-#   'https://data.qiime2.org/distro/core/qiime2-2020.8-py36-osx-conda.yml' > \
-#   'qiime2.yml'
-# conda env create -n 'qiime2' --file 'qiime2.yml'
-# rm 'qiime2.yml'
-
-# TODO: Install Quarto
 # TODO: Manual install reminders
 # Poll everywhere https://www.polleverywhere.com/

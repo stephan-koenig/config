@@ -1,10 +1,12 @@
 abind
+and
 arrow
 askpass
 assertthat
 babynames
 backports
 base64enc
+base64url
 bench
 bigD
 BiocManager
@@ -17,6 +19,7 @@ bookdown
 brew
 brio
 broom
+bsicons
 bslib
 bundle
 butcher
@@ -36,9 +39,11 @@ collections
 colorspace
 commonmark
 conflicted
+covr
 cpp11
 crayon
 credentials
+crosstalk
 curl
 cyclocomp
 data.table
@@ -53,8 +58,10 @@ diffobj
 digest
 downlit
 dplyr
+DT
 dtplyr
 ellipsis
+epoxy
 evaluate
 fansi
 farver
@@ -85,11 +92,13 @@ googledrive
 googlesheets4
 gower
 GPfit
+gridlayout
 gt
 gtable
 hardhat
 haven
 here
+highcharter
 highr
 hms
 htmltools
@@ -98,6 +107,7 @@ httpuv
 httr
 httr2
 ids
+igraph
 infer
 ini
 inum
@@ -161,11 +171,13 @@ pkgbuild
 pkgconfig
 pkgdown
 pkgload
+plotly
 plumber
 plyr
 png
 praise
 prettyunits
+probably
 pROC
 processx
 prodlim
@@ -179,6 +191,7 @@ psych
 psychTools
 purrr
 quadprog
+quantmod
 quantreg
 quarto
 R.cache
@@ -207,7 +220,9 @@ repr
 reprex
 reticulate
 rex
+rjson
 rlang
+rlist
 rmarkdown
 roxygen2
 rprojroot
@@ -224,6 +239,7 @@ servr
 sessioninfo
 shape
 shiny
+shinyuieditor
 skimr
 slider
 snakecase
@@ -239,6 +255,7 @@ svglite
 swagger
 sys
 systemfonts
+targets
 testthat
 textshaping
 thematic
@@ -250,6 +267,7 @@ tidyverse
 timechange
 timeDate
 tinytex
+TTR
 tune
 tzdb
 urlchecker
@@ -271,10 +289,13 @@ withr
 workflows
 workflowsets
 xfun
+XML
 xml2
 xmlparsedata
 xopen
 xtable
+xts
 yaml
 yardstick
 zip
+zoo

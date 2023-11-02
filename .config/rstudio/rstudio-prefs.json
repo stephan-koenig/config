@@ -21,5 +21,8 @@
     "editor_theme": "Night Owl {rsthemes}",
     "insert_native_pipe_operator": true,
     "new_proj_use_renv": true,
-    "new_proj_git_init": true
+    "new_proj_git_init": true,
+    "show_terminal_tab": false,
+    "copilot_enabled": true,
+    "visual_markdown_editing_wrap": "sentence"
 }
