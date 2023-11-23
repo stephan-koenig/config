@@ -7,7 +7,7 @@
     "remove_history_duplicates": true,
     "load_workspace": false,
     "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.1/Resources/library/learnr/rmarkdown/templates/tutorial",
-    "default_project_location": "~/Documents/GitHub",
+    "default_project_location": "/Users/stephan/Documents/GitHub/github-com",
     "document_author": "Stephan Koenig",
     "rainbow_parentheses": true,
     "initial_working_directory": "~",
@@ -22,7 +22,7 @@
     "insert_native_pipe_operator": true,
     "new_proj_use_renv": true,
     "new_proj_git_init": true,
-    "show_terminal_tab": false,
+    "visual_markdown_editing_wrap": "sentence",
     "copilot_enabled": true,
-    "visual_markdown_editing_wrap": "sentence"
+    "copilot_completions_delay": 1000
 }

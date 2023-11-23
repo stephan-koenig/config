@@ -1,14 +1,5 @@
-# Use Posit Package Manager specific to OS
-local({
-  repo <- switch(
-    Sys.info()[["sysname"]],
-    Linux = "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
-    "https://packagemanager.posit.co/cran/latest"
-  )
-  r <- getOption("repos")
-  r["CRAN"] <- repo
-  options(repos = r)
-})
+# Use Posit Package Manager
+options(repos = c(PPM = "https://packagemanager.posit.co/cran/latest"))
 
 if (interactive()) {
   suppressMessages(require(devtools))
@@ -24,4 +15,4 @@ if (interactive()) {
 }
 
 # Use brew-installed compilers
-Sys.setenv(PATH = paste("/usr/local/opt", Sys.getenv("PATH"), sep = ":"))
+# Sys.setenv(PATH = paste("/usr/local/opt", Sys.getenv("PATH"), sep = ":"))

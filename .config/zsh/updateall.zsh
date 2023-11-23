@@ -2,6 +2,6 @@ updateall () {
 	updatezsh
 	brew upgrade
 	mas upgrade
-	Rscript -e 'update.packages(repos = "https://packagemanager.rstudio.com/cran/latest")'
+	Rscript -e 'update.packages()'
 	conda update conda
 }

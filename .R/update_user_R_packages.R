@@ -1,4 +1,4 @@
-pak::pkg_list() |> 
+packages <- pak::pkg_list() |> 
   dplyr::mutate(
     package = dplyr::if_else(
       !is.na(remotepkgref),
@@ -6,5 +6,7 @@ pak::pkg_list() |>
       package
     )
   ) |> 
-  dplyr::pull(package) |>
-  readr::write_lines(file = "~/.R/user_R_packages.txt")
+  dplyr::pull(package)
+
+packages |>
+  pak::pkg_install()
