@@ -27,6 +27,10 @@ brew bundle --file=~/.config/brew/Brewfile
 echo 'Cleaning up Homebrew...'
 brew cleanup
 
+# Install with Determinate Nix installer
+echo 'Installing Nix...'
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+
 # 1Password SSH agent setup
 mkdir -p ~/.1password
 ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
@@ -51,7 +55,8 @@ for file in "$HOME/.config/zsh/"*; do
   fi
 done
 
-echo 'Installing R packages and Miniconda...'
+echo 'Installing R, R packages and Miniconda...'
+rig add release && rig system setup-user-lib
 Rscript $HOME/.R/setup_R.R
 
 # TODO: Manual install reminders
