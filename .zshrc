@@ -137,7 +137,7 @@ compdef _op op
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
 # zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Manage Ruby versions with chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
@@ -151,3 +151,5 @@ HOMEBREW_BUNDLE_FILE="${HOME}/brew/Brewfile"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
