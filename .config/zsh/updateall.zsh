@@ -1,8 +1,8 @@
 updateall () {
-	updatezsh
 	brew upgrade
+	nix flake update --flake $HOME/.config/home-manager && home-manager switch
 	mas upgrade
-	# nix flake update --flake $HOME/.config/home-manager && home-manager switch
+	antidote update --bundles
 	# Rscript -e 'update.packages()'
 	# conda update conda
 }

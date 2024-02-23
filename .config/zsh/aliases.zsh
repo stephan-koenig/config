@@ -1,1 +1,2 @@
-alias zshconfig='subl $HOME/.zshrc'
+alias zshconfig='code $HOME/.zshrc'
+alias nix='noglob nix'

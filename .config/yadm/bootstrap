@@ -1,16 +1,22 @@
 #!/usr/bin/env bash
-# curl-pipe remote yadm and bootstrap dotfile repo
-# See bootstrap.yadm.io
-# yadm_repo="https://github.com/TheLocehiliosan/yadm"
-# yadm_release=${release:-master}
-# repo_url="https://github.com/stephan-koenig/config.git"
-
-# curl -fsSL "$yadm_repo/raw/$yadm_release/yadm" | bash -s -- clone "$repo_url" -f
-
-# Setup script for setting up a new macOS machine
+# Setup script for a new macOS machine
 echo 'Starting setup'
 
 cd $HOME
+
+# Determinate Nix installer
+echo 'Installing Nix...'
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+
+echo 'Clone dotflile repository with yadm...'
+repo_url="https://github.com/stephan-koenig/config.git"
+nix run nixpkgs#yadm -- clone "${repo_url}" -f
+
+echo 'Installing Nix Home Manager...'
+nix run home-manager/master -- init --switch
+
+echo 'Installing Nix packages...'
+nix flake update --flake $HOME/.config/home-manager && home-manager switch
 
 # Install Homebrew if missing (will also install Xcode command line tools)
 if test ! "$(which brew)"; then
@@ -27,9 +33,9 @@ brew bundle --file=~/.config/brew/Brewfile
 echo 'Cleaning up Homebrew...'
 brew cleanup
 
-# Install with Determinate Nix installer
-echo 'Installing Nix...'
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+echo 'Installing zsh plugins...'
+antidote load
+ZSH="$(antidote path ohmyzsh/ohmyzsh)"
 
 # 1Password SSH agent setup
 mkdir -p ~/.1password
@@ -42,14 +48,10 @@ echo 'You must first trust your key on your YubiKey using "gpg --edit-key <key i
 echo 'then "trust" and "5" (for ultimate) to sign with it.'
 echo 'Ensure the latest "gpg-agent" is running using "gpgconf --kill all".'
 
-# zsh setup
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-echo 'Copying configuration and preference files into place...'
-
 # Link zsh configuration files
+echo 'Copying configuration and preference files into place...'
 for file in "$HOME/.config/zsh/"*; do
-  link="${ZSH_CUSTOM}/$(basename "${file}")"
+  link="${ZSH}/custom/$(basename "${file}")"
   if [[ ! -f "$link" ]]; then
     ln -s "${file}" "${link}"
   fi

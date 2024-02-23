@@ -5,6 +5,7 @@ if (interactive()) {
   suppressMessages(require(devtools))
   suppressMessages(require(reprex))
   suppressMessages(require(styler))
+	suppressMessages(require(testthat))
 	suppressMessages(require(usethis))
 	options(
 	  reprex.style         = TRUE,

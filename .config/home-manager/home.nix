@@ -18,15 +18,18 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    antidote
     direnv
     fzf
     gh
     git
     gnupg
+    lsd
     mas
     nix-direnv
     # quarto
     # R
+    tldr
     tmux
     tree
     yadm
@@ -99,10 +102,34 @@
   programs = {
     direnv = {
       enable = true;
-      enableZshIntegration = true; # see note on other shells below
+      enableZshIntegration = true;
       nix-direnv.enable = true;
     };
 
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    # zsh.antidote = {
+    #   enable = true;
+    #   plugins = [
+    #     "ohmyzsh/ohmyzsh"
+    #     "zsh-users/zsh-autosuggestions"
+    #     "zsh-users/zsh-completions"
+    #     "zsh-users/zsh-syntax-highlighting"
+    #     "romkatv/powerlevel10k"
+    #   ];
+    # };
+    
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
+    
     # zsh.enable = true;
     # Let Home Manager install and manage itself.
     home-manager.enable = true;

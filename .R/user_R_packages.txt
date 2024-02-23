@@ -1,11 +1,14 @@
 conflicted
+covr
 datapasta
 devtools
 lintr
 quarto
 renv
 reprex
+roxygen
 styler
 usethis
+testthat
 tidymodels
 tidyverse

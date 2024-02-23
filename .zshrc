@@ -10,9 +10,6 @@ fi
 # Include formulae with executables in /usr/local/sbin
 export PATH="/usr/local/sbin:$PATH"
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -68,10 +65,15 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Activate and initiate antigen
-source /usr/local/share/antigen/antigen.zsh
-antigen init ~/.antigenrc
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Activate and initiate antidote
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
+# Path to your oh-my-zsh installation.
+export ZSH="$(antidote path ohmyzsh/ohmyzsh)"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -103,29 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # Prevent tab completion from ~/.ssh/known_hosts
 zstyle ':completion:*:(ssh|scp|ftp|sftp):*' hosts $hosts
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/stephan/Library/r-miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/stephan/Library/r-miniconda/etc/profile.d/conda.sh" ]; then
-        . "/Users/stephan/Library/r-miniconda/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/stephan/Library/r-miniconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# >>>> Vagrant command completion (start)
-fpath=(/opt/vagrant/embedded/gems/2.2.18/gems/vagrant-2.2.18/contrib/zsh $fpath)
-compinit
-# <<<<  Vagrant command completion (end)
-
 # Configure gpg
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
@@ -139,17 +118,15 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
-# Manage Ruby versions with chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-
 # Use 1Password for CLI tools
 source ~/.config/op/plugins.sh
 
 # Set Homebrew `Brewfile` location
-HOMEBREW_BUNDLE_FILE="${HOME}/brew/Brewfile"
+export HOMEBREW_BUNDLE_FILE="${HOME}/.config/brew/Brewfile"
+
+# Activate direnv
+eval "$(direnv hook zsh)"
+export DIRENV_LOG_FORMAT=""
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
