@@ -6,7 +6,7 @@ cd $HOME
 
 # Determinate Nix installer
 echo 'Installing Nix...'
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install macos
 
 echo 'Clone dotflile repository with yadm...'
 repo_url="https://github.com/stephan-koenig/config.git"

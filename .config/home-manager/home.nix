@@ -26,6 +26,7 @@
     gnupg
     lsd
     mas
+    neovim
     nix-direnv
     # quarto
     # R

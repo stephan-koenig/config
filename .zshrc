@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -105,11 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # Prevent tab completion from ~/.ssh/known_hosts
 zstyle ':completion:*:(ssh|scp|ftp|sftp):*' hosts $hosts
 
-# Configure gpg
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
 # 1password-cli
 eval "$(op completion zsh)"
 compdef _op op
@@ -127,6 +120,3 @@ export HOMEBREW_BUNDLE_FILE="${HOME}/.config/brew/Brewfile"
 # Activate direnv
 eval "$(direnv hook zsh)"
 export DIRENV_LOG_FORMAT=""
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
