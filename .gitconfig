@@ -8,7 +8,7 @@
 	email = stephan.koenig@gmail.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAQpxAxU27JhB5GdDRLLU9Qorp8FLZSOvhBPD2eaMIHS
 [core]
-	editor = code --wait
+	editor = nvim -f
 	excludesfile = /Users/stephan/.gitignore_global
 [color]
 	ui = auto
