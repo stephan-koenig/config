@@ -6,7 +6,9 @@ cd $HOME
 
 # Determinate Nix installer
 echo 'Installing Nix...'
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install macos
+curl --proto '=https' --tlsv1.2 -sSf -L \
+  https://install.determinate.systems/nix \
+  | sh -s -- install macos
 
 echo 'Clone dotflile repository with yadm...'
 repo_url="https://github.com/stephan-koenig/config.git"
@@ -57,9 +59,15 @@ for file in "$HOME/.config/zsh/"*; do
   fi
 done
 
-echo 'Installing R, R packages and Miniconda...'
+echo 'Installing R and R packages...'
 rig add release && rig system setup-user-lib
 Rscript $HOME/.R/setup_R.R
+
+echo 'Installing GitHub CLI and Quarto extensions'
+gh extension install github/gh-copilot
+gh extension install github/gh-classroom
+quarto install tinytex
+quarto install chromium
 
 # TODO: Manual install reminders
 # Poll everywhere https://www.polleverywhere.com/
