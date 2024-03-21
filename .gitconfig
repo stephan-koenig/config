@@ -33,8 +33,6 @@
 	autoSetupRemote = true
 [merge]
 	conflictstyle = diff3
-[credetial]
-	helper = osxkeychain
 [merge]
   tool = vscode
 [mergetool "vscode"]
@@ -57,3 +55,9 @@
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 	allowedSignersFile = ~/.ssh/allowed_signers
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/local/bin/op plugin run -- gh auth git-credential 
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/local/bin/op plugin run -- gh auth git-credential
