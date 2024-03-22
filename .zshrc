@@ -119,6 +119,9 @@ source ~/.config/op/plugins.sh
 # Set Homebrew `Brewfile` location
 export HOMEBREW_BUNDLE_FILE="${HOME}/.config/brew/Brewfile"
 
+# Enable vi mode in Zsh terminal
+bindkey -v
+
 # Activate direnv
 eval "$(direnv hook zsh)"
 export DIRENV_LOG_FORMAT=""
