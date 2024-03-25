@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='vim'
+export EDITOR='hx'
 export VISUAL="$EDITOR"
 
 # Compilation flags
@@ -120,7 +120,7 @@ source ~/.config/op/plugins.sh
 export HOMEBREW_BUNDLE_FILE="${HOME}/.config/brew/Brewfile"
 
 # Enable vi mode in Zsh terminal
-bindkey -v
+# bindkey -v
 
 # Activate direnv
 eval "$(direnv hook zsh)"

@@ -24,9 +24,9 @@
     gh
     git
     gnupg
+    helix
     lsd
     mas
-    neovim
     nix-direnv
     # quarto
     # R
@@ -34,6 +34,7 @@
     tmux
     tree
     yadm
+    zellij
     zoxide
     zsh    
 
