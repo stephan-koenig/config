@@ -25,13 +25,13 @@
     git
     gnupg
     helix
+    lazygit
     lsd
     mas
     nix-direnv
     # quarto
     # R
     tldr
-    tmux
     tree
     yadm
     zellij

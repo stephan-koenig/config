@@ -1,3 +1,4 @@
+clipr
 conflicted
 covr
 datapasta
@@ -7,6 +8,7 @@ quarto
 renv
 reprex
 roxygen
+rhub
 styler
 usethis
 testthat

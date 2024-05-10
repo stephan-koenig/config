@@ -125,3 +125,4 @@ export HOMEBREW_BUNDLE_FILE="${HOME}/.config/brew/Brewfile"
 # Activate direnv
 eval "$(direnv hook zsh)"
 export DIRENV_LOG_FORMAT=""
+
