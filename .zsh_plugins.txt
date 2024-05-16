@@ -1,8 +1,8 @@
 # Plugins
-ohmyzsh/ohmyzsh
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+Aloxaf/fzf-tab
 
 # Prompt plugins
 romkatv/powerlevel10k kind:fpath

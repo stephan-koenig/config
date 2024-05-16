@@ -37,7 +37,6 @@ brew cleanup
 
 echo 'Installing zsh plugins...'
 antidote load
-ZSH="$(antidote path ohmyzsh/ohmyzsh)"
 
 # 1Password SSH agent setup
 mkdir -p ~/.1password
@@ -49,15 +48,6 @@ gpg --auto-key-locate hkps://keys.openpgp.org --locate-keys stephan.koenig@gmail
 echo 'You must first trust your key on your YubiKey using "gpg --edit-key <key id>",'
 echo 'then "trust" and "5" (for ultimate) to sign with it.'
 echo 'Ensure the latest "gpg-agent" is running using "gpgconf --kill all".'
-
-# Link zsh configuration files
-echo 'Copying configuration and preference files into place...'
-for file in "$HOME/.config/zsh/"*; do
-  link="${ZSH}/custom/$(basename "${file}")"
-  if [[ ! -f "$link" ]]; then
-    ln -s "${file}" "${link}"
-  fi
-done
 
 echo 'Installing R and R packages...'
 rig add release && rig system setup-user-lib
