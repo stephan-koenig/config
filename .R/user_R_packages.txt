@@ -7,6 +7,7 @@ lintr
 quarto
 renv
 reprex
+rlang
 roxygen
 rhub
 styler
