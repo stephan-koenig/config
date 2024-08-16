@@ -8,7 +8,7 @@ quarto
 renv
 reprex
 rlang
-roxygen
+roxygen2
 rhub
 styler
 usethis
