@@ -1,7 +1,12 @@
 globalCallingHandlers(error = rlang::entrace)
 
 # Use Posit Package Manager
-options(repos = c(PPM = "https://packagemanager.posit.co/cran/latest"))
+options(
+  repos = c(CRAN = "https://p3m.dev/cran/latest"),
+  warnPartialMatchArgs = TRUE,
+  warnPartialMatchDollar = TRUE,
+  warnPartialMatchAttr = TRUE
+)
 
 if (interactive()) {
   suppressMessages(require(devtools))

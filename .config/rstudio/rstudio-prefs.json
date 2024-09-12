@@ -27,6 +27,15 @@
     "git_signed_commits": true,
     "font_size_points": 12,
     "indent_guides": "rainbowfills",
+    "copilot_enabled": true,
+    "cran_mirror": {
+        "name": "Custom",
+        "host": "Custom",
+        "url": "https://p3m.dev/cran/latest",
+        "secondary": "",
+        "country": "",
+        "changed": false
+    },
     "new_proj_git_init": true,
-    "copilot_enabled": true
+    "new_proj_use_renv": true
 }
