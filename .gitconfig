@@ -10,6 +10,7 @@
 [core]
 	editor = "$EDITOR"
 	excludesfile = /Users/stephan/.gitignore_global
+	pager = delta
 [color]
 	ui = auto
 	branch = auto
@@ -32,15 +33,14 @@
 	default = upstream
 	autoSetupRemote = true
 [merge]
-	conflictstyle = diff3
-[merge]
-  tool = vscode
+    tool = vscode
+	conflictStyle = zdiff3
 [mergetool "vscode"]
-  cmd = code --wait $MERGED
+    cmd = code --wait $MERGED
 [diff]
-  tool = vscode
+    tool = vscode
 [difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+    cmd = code --wait --diff $LOCAL $REMOTE
 [pull]
 	ff = only
 [init]
@@ -66,3 +66,8 @@
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true

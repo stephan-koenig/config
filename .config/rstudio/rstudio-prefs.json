@@ -27,7 +27,6 @@
     "git_signed_commits": true,
     "font_size_points": 12,
     "indent_guides": "rainbowfills",
-    "copilot_enabled": true,
     "cran_mirror": {
         "name": "Custom",
         "host": "Custom",
@@ -37,5 +36,8 @@
         "changed": false
     },
     "new_proj_git_init": true,
-    "new_proj_use_renv": true
+    "new_proj_use_renv": true,
+    "emoji_skintone": "Medium",
+    "code_formatter": "styler",
+    "visual_markdown_editing_canonical": true
 }

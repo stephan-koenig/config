@@ -3,6 +3,7 @@ conflicted
 covr
 datapasta
 devtools
+languageserver
 lintr
 quarto
 renv

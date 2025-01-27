@@ -35,7 +35,6 @@
     tldr
     tree
     yadm
-    zellij
     zoxide
     zsh    
 
