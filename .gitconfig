@@ -71,3 +71,6 @@
 [delta]
 	navigate = true
 	side-by-side = true
+[rebase]
+	autosquash = true
+	updateRefs = true
