@@ -3,9 +3,11 @@ globalCallingHandlers(error = rlang::entrace)
 # Use Posit Package Manager
 options(
   repos = c(CRAN = "https://p3m.dev/cran/latest"),
-  warnPartialMatchArgs = TRUE,
+  warnPartialMatchArgs   = TRUE,
   warnPartialMatchDollar = TRUE,
-  warnPartialMatchAttr = TRUE
+  warnPartialMatchAttr   = TRUE,
+  shiny.autoreload       = TRUE,
+  shiny.launch.browser   = TRUE
 )
 
 if (interactive()) {
