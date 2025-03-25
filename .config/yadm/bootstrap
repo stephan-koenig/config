@@ -50,12 +50,12 @@ antidote load
 mkdir -p ~/.1password
 ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
 
-# GPG setup
-echo 'Importing GPG public key...'
-gpg --auto-key-locate hkps://keys.openpgp.org --locate-keys stephan.koenig@gmail.com
-echo 'You must first trust your key on your YubiKey using "gpg --edit-key <key id>",'
-echo 'then "trust" and "5" (for ultimate) to sign with it.'
-echo 'Ensure the latest "gpg-agent" is running using "gpgconf --kill all".'
+# # GPG setup
+# echo 'Importing GPG public key...'
+# gpg --auto-key-locate hkps://keys.openpgp.org --locate-keys stephan.koenig@gmail.com
+# echo 'You must first trust your key on your YubiKey using "gpg --edit-key <key id>",'
+# echo 'then "trust" and "5" (for ultimate) to sign with it.'
+# echo 'Ensure the latest "gpg-agent" is running using "gpgconf --kill all".'
 
 echo 'Installing R and R packages...'
 rig add release && rig system setup-user-lib
