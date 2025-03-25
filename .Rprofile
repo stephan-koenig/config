@@ -1,4 +1,6 @@
-globalCallingHandlers(error = rlang::entrace)
+if (require(rlang, quietly = TRUE)) {
+  globalCallingHandlers(error = rlang::entrace)
+}
 
 # Use Posit Package Manager
 options(
@@ -14,14 +16,14 @@ if (interactive()) {
   suppressMessages(require(devtools))
   suppressMessages(require(reprex))
   suppressMessages(require(styler))
-	suppressMessages(require(testthat))
-	suppressMessages(require(usethis))
-	options(
-	  reprex.style         = TRUE,
-	  rsthemes.theme_light = "base16 Unikitty Light {rsthemes}",
-	  rsthemes.theme_dark  = "Night Owl {rsthemes}",
-	  styler.cache_root    = "styler-perm"
-	)
+  suppressMessages(require(testthat))
+  suppressMessages(require(usethis))
+  options(
+    reprex.style         = TRUE,
+    rsthemes.theme_light = "base16 Unikitty Light {rsthemes}",
+    rsthemes.theme_dark  = "Night Owl {rsthemes}",
+    styler.cache_root    = "styler-perm"
+  )
 }
 
 # Use brew-installed compilers
