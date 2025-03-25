@@ -4,21 +4,21 @@ echo 'Starting setup'
 
 cd $HOME
 
-# Determinate Nix installer
-echo 'Installing Nix...'
-curl --proto '=https' --tlsv1.2 -sSf -L \
-  https://install.determinate.systems/nix \
-  | sh -s -- install macos
+# # Determinate Nix installer
+# echo 'Installing Nix...'
+# curl --proto '=https' --tlsv1.2 -sSf -L \
+#   https://install.determinate.systems/nix \
+#   | sh -s -- install macos
 
-echo 'Clone dotflile repository with yadm...'
-repo_url="https://github.com/stephan-koenig/config.git"
-nix run nixpkgs#yadm -- clone "${repo_url}" -f
+# echo 'Clone dotflile repository with yadm...'
+# repo_url="https://github.com/stephan-koenig/config.git"
+# nix run nixpkgs#yadm -- clone "${repo_url}" -f
 
-echo 'Installing Nix Home Manager...'
-nix run home-manager/master -- init --switch
+# echo 'Installing Nix Home Manager...'
+# nix run home-manager/master -- init --switch
 
-echo 'Installing Nix packages...'
-nix flake update --flake $HOME/.config/home-manager && home-manager switch
+# echo 'Installing Nix packages...'
+# nix flake update --flake $HOME/.config/home-manager && home-manager switch
 
 # Install Homebrew if missing (will also install Xcode command line tools)
 if test ! "$(which brew)"; then

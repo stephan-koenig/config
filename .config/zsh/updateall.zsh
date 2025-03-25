@@ -1,8 +1,8 @@
 updateall () {
 	brew upgrade
 	# sudo -i nix upgrade-nix
-	nix flake update --flake $HOME/.config/home-manager \
-          && home-manager switch
+	# nix flake update --flake $HOME/.config/home-manager \
+          # && home-manager switch
 	mas upgrade
 	antidote update --bundles
 	# Update extensions
