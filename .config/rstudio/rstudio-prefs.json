@@ -39,5 +39,6 @@
     "new_proj_use_renv": true,
     "emoji_skintone": "Medium",
     "code_formatter": "styler",
-    "visual_markdown_editing_canonical": true
+    "visual_markdown_editing_canonical": true,
+    "reformat_on_save": true
 }
