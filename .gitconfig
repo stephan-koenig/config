@@ -9,7 +9,7 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAQpxAxU27JhB5GdDRLLU9Qorp8FLZSOvhBPD2eaMIHS
 [core]
 	editor = "$EDITOR"
-	excludesfile = /Users/stephan/.gitignore_global
+	excludesfile = /Users/stephankoenig/.gitignore_global
 	pager = delta
 [color]
 	ui = auto
