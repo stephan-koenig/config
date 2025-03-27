@@ -23,9 +23,9 @@ CXX14=$(GCCBASE)/bin/g++-${GCCVERSION}
 CXX17=$(GCCBASE)/bin/g++-${GCCVERSION}
 CXX1X=$(GCCBASE)/bin/g++-${GCCVERSION}
 
-CPPFLAGS=-isystem "$(GCCBASE)/include" -isysroot "$(XCBASE)"
-LDFLAGS=-L"$(GCCBASE)/lib" -L"$(GETTEXT)/lib" --sysroot="$(XCBASE)"
-
 FC=$(GCCBASE)/bin/gfortran
 F77=$(GCCBASE)/bin/gfortran
 FLIBS=-L$(GCCBASE)/lib/gcc/${GCCVERSION}/ -lm -lgfortran
+
+LDFLAGS += -L/opt/homebrew/opt/libomp/lib -lomp
+CPPFLAGS += -I/opt/homebrew/opt/libomp/include -Xpreprocessor -fopenmp

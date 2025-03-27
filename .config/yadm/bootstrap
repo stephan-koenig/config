@@ -43,6 +43,10 @@ brew bundle --file=~/.config/brew/Brewfile
 echo 'Cleaning up Homebrew...'
 brew cleanup
 
+# Make brew available to macOS GUI apps
+# https://docs.brew.sh/FAQ#my-mac-apps-dont-find-homebrew-utilities
+# # sudo launchctl config user path "$(brew --prefix)/bin:${PATH}"
+
 echo 'Installing zsh plugins...'
 antidote load
 
