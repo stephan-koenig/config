@@ -1,76 +1,76 @@
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [user]
-	name = Stephan Koenig
-	email = stephan.koenig@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAQpxAxU27JhB5GdDRLLU9Qorp8FLZSOvhBPD2eaMIHS
+    name = Stephan Koenig
+    email = stephan.koenig@gmail.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAQpxAxU27JhB5GdDRLLU9Qorp8FLZSOvhBPD2eaMIHS
 [core]
-	editor = "$EDITOR"
-	excludesfile = /Users/stephankoenig/.gitignore_global
-	pager = delta
+    editor = "$EDITOR"
+    excludesfile = /Users/stephankoenig/.gitignore_global
+    pager = delta
 [color]
-	ui = auto
-	branch = auto
-	diff = auto
-	status = auto
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 [push]
-	default = upstream
-	autoSetupRemote = true
+    default = upstream
+    autoSetupRemote = true
 [merge]
-	tool = smerge
-	conflictStyle = zdiff3
+    tool = smerge
+    conflictStyle = zdiff3
 [mergetool "smerge"]
-	cmd = smerge mergetool "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
-	trustExitCode = true
+    cmd = smerge mergetool "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
+    trustExitCode = true
 [diff]
     tool = vscode
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [pull]
-	ff = only
+    ff = only
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [commit]
-	gpgsign = true
+    gpgsign = true
 [gpg]
-	format = ssh
+    format = ssh
 [tag]
-	forceSignAnnotated = true
+    forceSignAnnotated = true
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-	allowedSignersFile = ~/.ssh/allowed_signers
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+    allowedSignersFile = ~/.ssh/allowed_signers
 [credential "https://github.com"]
-	helper =
-	helper = !/usr/local/bin/op plugin run -- gh auth git-credential 
+    helper =
+    helper = !/usr/local/bin/op plugin run -- gh auth git-credential
 [credential "https://gist.github.com"]
-	helper =
-	helper = !/usr/local/bin/op plugin run -- gh auth git-credential
+    helper =
+    helper = !/usr/local/bin/op plugin run -- gh auth git-credential
 [credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
+    helper =
+    helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+    useHttpPath = true
 [interactive]
-	diffFilter = delta --color-only
+    diffFilter = delta --color-only
 [delta]
-	navigate = true
-	side-by-side = true
+    navigate = true
+    side-by-side = true
 [rebase]
-	autosquash = true
-	updateRefs = true
+    autosquash = true
+    updateRefs = true
