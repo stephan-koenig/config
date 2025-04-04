@@ -22,7 +22,7 @@
     gpgsign = true
 [core]
     editor = "$EDITOR"
-    excludesfile = /Users/stephankoenig/.gitignore_global
+    excludesfile = /Users/stephankoenig/.gitignore
     pager = delta
 [credential]
     helper =
