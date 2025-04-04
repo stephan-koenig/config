@@ -33,10 +33,11 @@
 	default = upstream
 	autoSetupRemote = true
 [merge]
-    tool = vscode
+	tool = smerge
 	conflictStyle = zdiff3
-[mergetool "vscode"]
-    cmd = code --wait $MERGED
+[mergetool "smerge"]
+	cmd = smerge mergetool "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
+	trustExitCode = true
 [diff]
     tool = vscode
 [difftool "vscode"]
