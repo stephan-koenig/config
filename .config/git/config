@@ -4,6 +4,8 @@
     lol = log --all --graph --format='format:%C(bold blue)%h %C(reset)- %s %C(auto)%d%C(reset)'
     lop = log --all --graph --format='format:%w(0,2,6)%C(bold blue)%h %C(reset)- %C(bold cyan)%aD %C(bold yellow)(%ar)%C(auto)%d%n%s%C(dim white) - %an%C(reset)'
     st = status --short
+[branch]
+    sort = -committerdate
 [color]
     ui = auto
     branch = auto
@@ -22,6 +24,8 @@
     added = yellow
     changed = green
     untracked = cyan
+[column]
+    ui = auto
 [commit]
     gpgsign = true
 [core]
@@ -78,6 +82,7 @@
     autoupdate = true
 [tag]
     forceSignAnnotated = true
+    sort = version:refname
 [user]
     name = Stephan Koenig
     email = stephan.koenig@gmail.com
