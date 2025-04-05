@@ -80,8 +80,9 @@
 [pull]
     ff = only
 [push]
-    default = upstream
     autoSetupRemote = true
+    default = simple
+    followTags = true
 [rebase]
     autosquash = true
     updateRefs = true
