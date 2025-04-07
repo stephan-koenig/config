@@ -82,7 +82,7 @@
     cmd = smerge mergetool "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
     trustExitCode = true
 [pull]
-    ff = only
+    rebase = true
 [push]
     autoSetupRemote = true
     default = simple
