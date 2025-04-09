@@ -40,5 +40,6 @@
     "emoji_skintone": "Medium",
     "code_formatter": "styler",
     "visual_markdown_editing_canonical": true,
-    "reformat_on_save": true
+    "reformat_on_save": true,
+    "default_open_project_location": "~/Documents/github"
 }
