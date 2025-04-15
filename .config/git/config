@@ -1,10 +1,10 @@
 [alias]
-    can = commit --amend --no-edit
+    an = commit --amend --no-edit
     conf = config --global --edit
-    fixup = commit --fixup
-    lol = log --all --graph --format='format:%C(bold blue)%h %C(reset)- %s %C(auto)%d%C(reset)'
-    lop = log --all --graph --format='format:%w(0,2,6)%C(bold blue)%h %C(reset)- %C(bold cyan)%aD %C(bold yellow)(%ar)%C(auto)%d%n%s%C(dim white) - %an%C(reset)'
-    squash = -c sequence.editor=: rebase --autosquash --interactive
+    fix = commit --fixup
+    l = log --all --graph --format='format:%C(bold blue)%h %C(reset)- %s %C(auto)%d%C(reset)'
+    lp = log --all --graph --format='format:%w(0,2,6)%C(bold blue)%h %C(reset)- %C(bold cyan)%aD %C(bold yellow)(%ar)%C(auto)%d%n%s%C(dim white) - %an%C(reset)'
+    sq = -c sequence.editor=: rebase --autosquash --interactive
     st = status --short
 [branch]
     sort = -committerdate
