@@ -25,6 +25,3 @@ if (interactive()) {
     styler.cache_root    = "styler-perm"
   )
 }
-
-# Use brew-installed compilers
-# Sys.setenv(PATH = paste("/usr/local/opt", Sys.getenv("PATH"), sep = ":"))
