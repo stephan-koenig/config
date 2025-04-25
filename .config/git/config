@@ -41,8 +41,6 @@
 [credential "https://gist.github.com"]
     helper =
     helper = !/opt/homebrew/bin/op plugin run -- gh auth git-credential
-[credential "https://dev.azure.com"]
-    useHttpPath = true
 [delta]
     navigate = true
     side-by-side = true
