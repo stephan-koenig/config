@@ -38,8 +38,9 @@
     "new_proj_git_init": true,
     "new_proj_use_renv": true,
     "emoji_skintone": "Medium",
-    "code_formatter": "styler",
+    "code_formatter": "external",
     "visual_markdown_editing_canonical": true,
     "reformat_on_save": true,
-    "default_open_project_location": "~/Documents/github"
+    "default_open_project_location": "~/Documents/github",
+    "code_formatter_external_command": "~/.local/bin/air format"
 }

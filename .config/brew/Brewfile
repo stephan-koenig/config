@@ -1,4 +1,5 @@
 tap "r-lib/rig"
+brew "air"
 brew "antidote"
 brew "bat"
 brew "cairo"
