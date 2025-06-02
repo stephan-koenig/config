@@ -6,3 +6,11 @@ args = ["language-server"]
 name = "r"
 language-servers = ["air", "r"]
 auto-format = true
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "python"
+language-servers = ["ruff"]
