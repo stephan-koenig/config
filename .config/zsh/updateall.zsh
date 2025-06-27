@@ -5,8 +5,9 @@ updateall () {
           # && home-manager switch
 	mas upgrade
 	antidote update --bundles
+	uv tool upgrade --all
 	# Update extensions
-	# op plugin run -- gh extension upgrade --all gh extension upgrade --all
+	# op plugin run -- gh extension upgrade --all
 	# quarto update tool chromium
 	# quarto update tool tinytex
 	# Rscript -e 'update.packages()'
