@@ -1,0 +1,10 @@
+# List global recipes
+@default:
+  just -g --list
+
+alias as := add-and-squash-fix
+
+# Add and squash fix for provided commit-hash 
+add-and-squash-fix commit-hash:
+  git commit --fixup {{commit-hash}}
+  git -c sequence.editor=: rebase --autosquash --interactive {{commit-hash}}~
