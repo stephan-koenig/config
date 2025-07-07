@@ -1,5 +1,5 @@
 alias ,as='just -g add-and-squash-fix'
 alias asciinema='uvx asciinema'
-alias homeconfig='$EDITOR $HOME/.config/home-manager/home.nix'
+alias ,homeconfig='$EDITOR $HOME/.config/home-manager/home.nix'
 alias nix='noglob nix'
-alias zshconfig='$EDITOR $HOME/.zshrc'
+alias ,zshconfig='$EDITOR $HOME/.zshrc'

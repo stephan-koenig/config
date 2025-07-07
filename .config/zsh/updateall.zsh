@@ -1,4 +1,4 @@
-updateall () {
+,updateall () {
 	brew upgrade
 	# sudo -i nix upgrade-nix
 	# nix flake update --flake $HOME/.config/home-manager \
@@ -13,3 +13,5 @@ updateall () {
 	# Rscript -e 'update.packages()'
 	# conda update conda
 }
+
+alias ,u=',updateall'
