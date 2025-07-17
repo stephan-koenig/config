@@ -5,11 +5,15 @@ if (require(rlang, quietly = TRUE)) {
 # Use Posit Package Manager
 options(
   repos = c(CRAN = "https://p3m.dev/cran/latest"),
-  warnPartialMatchArgs   = TRUE,
+  renv.config.pak.enabled = TRUE,
+  renv.config.ppm.enabled = TRUE,
+  renv.config.ppm.default = TRUE,
+  renv.settings.ppm.enabled = TRUE,
+  shiny.autoreload = TRUE,
+  shiny.launch.browser = TRUE,
+  warnPartialMatchArgs = TRUE,
   warnPartialMatchDollar = TRUE,
-  warnPartialMatchAttr   = TRUE,
-  shiny.autoreload       = TRUE,
-  shiny.launch.browser   = TRUE
+  warnPartialMatchAttr = TRUE
 )
 
 if (interactive()) {
