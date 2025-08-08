@@ -8,3 +8,9 @@ alias as := add-and-squash-fix
 add-and-squash-fix commit-hash:
   git commit --fixup {{commit-hash}}
   git -c sequence.editor=: rebase --autosquash --interactive {{commit-hash}}~
+
+alias ir := interactive-rebase
+
+# Start interactive rebase from provided commit-hash
+interactive-rebase commit-hash:
+  git rebase --interactive {{commit-hash}}~
