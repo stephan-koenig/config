@@ -1,5 +1,6 @@
 [alias]
     an = commit --amend --no-edit
+    au = add --update
     conf = config --global --edit
     fix = commit --fixup
     l = log --all --graph --format='format:%C(bold blue)%h %C(reset)- %s %C(auto)%d%C(reset)'
