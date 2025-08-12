@@ -27,6 +27,9 @@ setopt hist_find_no_dups
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
+# Docker CLI completions
+fpath=(/Users/stephankoenig/.docker/completions $fpath)
+
 # Load completions
 autoload -Uz compinit && compinit
 
