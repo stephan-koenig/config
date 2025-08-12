@@ -129,6 +129,7 @@ export _ZO_FZF_OPTS="--preview 'lsd --tree --depth 1 --color always --icon alway
 # Activate direnv
 eval "$(direnv hook zsh)"
 export DIRENV_LOG_FORMAT=""
+
 # 1password-cli
 eval "$(op completion zsh)"
 compdef _op op
@@ -148,5 +149,8 @@ export VISUAL="$EDITOR"
 # uv completions
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+
+# Atuin
+eval "$(atuin init zsh)"
 
 . "$HOME/.local/bin/env"

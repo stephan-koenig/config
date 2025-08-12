@@ -1,6 +1,7 @@
 tap "r-lib/rig"
 brew "air"
 brew "antidote"
+brew "atuin"
 brew "bat"
 brew "cairo"
 brew "direnv"

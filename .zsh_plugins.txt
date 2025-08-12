@@ -4,3 +4,4 @@ zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 Aloxaf/fzf-tab
 junegunn/fzf-git.sh
+atuinsh/atuin
