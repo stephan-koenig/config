@@ -16,3 +16,21 @@ interactive-rebase commit-hash:
   git rebase --interactive {{commit-hash}}~
 
 alias ir := interactive-rebase
+
+# Run PrairieLearn with workspaces and autograder for provided course
+[group('PrairieLearn')]
+run-prairielearn course='cpsc203':
+  @echo 'Using {{course}} for PrairieLearn.'
+  @mkdir -p "$HOME/Library/Cache/PrairieLearn/pl-ag-jobs"
+
+  @docker run -it --rm --platform linux/amd64 -p 3000:3000 \
+    -v "$HOME/.config/prairielearn/config.json:/PrairieLearn/config.json" \
+    -v "$HOME/Documents/github/pl-ubc-{{course}}:/course" \
+    -v "$HOME/Library/Cache/PrairieLearn/pl-ag-jobs:/jobs" \
+    -e HOST_JOBS_DIR="$HOME/Library/Cache/PrairieLearn/pl-ag-jobs" \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    --add-host=host.docker.internal:host-gateway \
+    --name prairielearn \
+    prairielearn/prairielearn
+
+alias pl := run-prairielearn
