@@ -146,11 +146,14 @@ source ~/.config/op/plugins.sh
 export EDITOR='hx'
 export VISUAL="$EDITOR"
 
+. "$HOME/.local/bin/env"
+
 # uv completions
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
+# marimo completions
+eval "$(_MARIMO_COMPLETE=zsh_source marimo)"
+
 # Atuin
 eval "$(atuin init zsh)"
-
-. "$HOME/.local/bin/env"

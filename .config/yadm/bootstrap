@@ -65,11 +65,15 @@ echo 'Installing R and R packages...'
 rig add release && rig system setup-user-lib
 Rscript $HOME/.R/setup_R.R
 
-echo 'Installing GitHub CLI and Quarto extensions'
+echo 'Installing GitHub CLI and Quarto extensions...'
 gh extension install github/gh-copilot
 gh extension install github/gh-classroom
 quarto install tinytex
 quarto install chromium
+
+echo 'Installing Python tools...'
+uv tool install ruff
+uv tool install marimo
 
 # TODO: Manual install reminders
 # Poll everywhere https://www.polleverywhere.com/
