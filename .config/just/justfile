@@ -2,15 +2,17 @@
 @default:
   just -g --list
 
-alias as := add-and-squash-fix
-
 # Add and squash fix for provided commit-hash 
+[group('Git')]
 add-and-squash-fix commit-hash:
   git commit --fixup {{commit-hash}}
   git -c sequence.editor=: rebase --autosquash --interactive {{commit-hash}}~
 
-alias ir := interactive-rebase
+alias as := add-and-squash-fix
 
 # Start interactive rebase from provided commit-hash
+[group('Git')]
 interactive-rebase commit-hash:
   git rebase --interactive {{commit-hash}}~
+
+alias ir := interactive-rebase
