@@ -76,10 +76,10 @@
 [interactive]
     diffFilter = delta --color-only
 [merge]
-    tool = smerge
+    tool = positron
     conflictStyle = zdiff3
-[mergetool "smerge"]
-    cmd = smerge mergetool "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
+[mergetool "positron"]
+    cmd = positron --wait --merge $REMOTE $LOCAL $BASE $MERGED
     trustExitCode = true
 [pull]
     rebase = true
