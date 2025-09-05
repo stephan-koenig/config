@@ -52,9 +52,9 @@
     colorMoved = plain
     mnemonicPrefix = true
     renames = true
-    tool = vscode
-[difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+    tool = positron
+[difftool "positron"]
+    cmd = positron --wait --diff $LOCAL $REMOTE
 [fetch]
     prune = true
     pruneTags = true
