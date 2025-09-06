@@ -2,7 +2,29 @@
 @default:
   just -g --list
 
-# Add and squash fix for provided commit-hash 
+# Build PrairieLearn workspace with uv and marimo
+[group('Docker')]
+build-workspace uv='0.8.22':
+  @echo 'Building PrairieLearn workspace with uv version {{uv}}...'
+  @docker build --platform linux/amd64 \
+    --build-arg UV_VERSION={{uv}} \
+    -t stephankoenig/workspace-marimo:uv-{{uv}} \
+    "$HOME/Documents/github/pl-ubc-cpsc203/workspaces/marimo"
+
+alias bw := build-workspace
+
+# Build PrairieLearn grader with marimo
+[group('Docker')]
+build-grader marimo='0.16.4':
+  @echo 'Building PrairieLearn grader with marimo version {{marimo}}...'
+  @docker build --platform linux/amd64 \
+    --build-arg MARIMO_VERSION={{marimo}} \
+    -t stephankoenig/marimo-grader:marimo-{{marimo}} \
+    "$HOME/Documents/github/pl-ubc-cpsc203/graders/marimo"
+
+alias bg := build-grader
+
+# Add and squash fix for provided commit-hash
 [group('Git')]
 add-and-squash-fix commit-hash:
   git commit --fixup {{commit-hash}}

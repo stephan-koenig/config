@@ -1,5 +1,7 @@
 alias ,as='just -g add-and-squash-fix'
 alias asciinema='uvx asciinema'
+alias ,bg='just -g build-grader'
+alias ,bw='just -g build-workspace'
 alias ,homeconfig='$EDITOR $HOME/.config/home-manager/home.nix'
 alias ,ir='just -g interactive-rebase'
 alias nix='noglob nix'
