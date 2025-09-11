@@ -10,4 +10,4 @@ window-colorspace = display-p3
 maximize = true
 
 macos-option-as-alt = true
-keybind = global:ctrl+grave_accent=toggle_quick_terminal
+keybind = global:control+shift+option+command+grave_accent=toggle_quick_terminal
