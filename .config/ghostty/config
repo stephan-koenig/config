@@ -1,6 +1,6 @@
 theme = catppuccin-mocha
 font-family = JetBrainsMono Nerd Font Mono
-font-size = 20
+font-size = 18
 gtk-titlebar = true
 cursor-style = block
 cursor-style-blink = false
