@@ -2,6 +2,8 @@
     an = commit --amend --no-edit
     au = add --update
     conf = config --global --edit
+    d = diff
+    ds = diff --staged
     fix = commit --fixup
     fl = log --format='format:%C(bold blue)%h %C(reset)- %s %C(auto)%d%C(reset)' --follow -p --
     l = log --all --graph --format='format:%C(bold blue)%h %C(reset)- %s %C(auto)%d%C(reset)'
