@@ -1,5 +1,6 @@
 [alias]
     an = commit --amend --no-edit
+    at = blame -wMCCC
     au = add --update
     conf = config --global --edit
     d = diff
