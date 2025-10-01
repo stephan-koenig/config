@@ -1,0 +1,38 @@
+{
+    "console.fontSize": 18,
+    "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.rulers": [
+        80
+    ],
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "renv.lock": "json"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "projectManager.git.baseFolders": [
+        "~/Documents/github"
+    ],
+    "quarto.render.renderOnSave": true,
+    "quarto.visualEditor.markdownWrap": "sentence",
+    "quarto.visualEditor.spellingDictionary": "en_CA",
+    "quarto.visualEditor.lineNumbers": false,
+    "terminal.external.osxExec": "Ghostty.app",
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.fontSize": 18,
+    "window.autoDetectColorScheme": true,
+    "[r]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Posit.air-vscode"
+    },
+    "[quarto]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "quarto.quarto"
+    }
+}
