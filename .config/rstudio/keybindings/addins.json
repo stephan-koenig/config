@@ -1,9 +1,0 @@
-{
-    "lintr::addin_lint": "Alt+Shift+L",
-    "lintr::addin_lint_package": "Ctrl+Alt+Shift+L",
-    "reprex::reprex_addin": "",
-    "reprex::reprex_selection": "Ctrl+Cmd+R",
-    "styler::style_active_file": "",
-    "rsthemes::use_theme_toggle": "Ctrl+Alt+D",
-    "styler::style_selection": "Ctrl+Cmd+S"
-}
