@@ -16,6 +16,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "notebook.formatOnSave.enabled": true,
     "projectManager.git.baseFolders": [
         "~/Documents/github"
     ],
@@ -27,12 +28,19 @@
     "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.fontSize": 18,
     "window.autoDetectColorScheme": true,
-    "[r]": {
+    "[python]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "Posit.air-vscode"
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "[quarto]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "quarto.quarto"
+    },
+    "[r]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Posit.air-vscode"
     }
 }
