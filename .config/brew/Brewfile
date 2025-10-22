@@ -47,7 +47,6 @@ cask "dropbox"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "ghostty"
-cask "grammarly-desktop"
 cask "homerow"
 cask "keymapp"
 cask "mathpix-snipping-tool"
@@ -68,17 +67,13 @@ cask "zoom"
 cask "zotero"
 mas "1Password for Safari", id: 1569813296
 mas "AdBlock", id: 1402042596
-mas "Cardhop", id: 1290358394
 mas "Cursor Pro", id: 1447043133
 mas "Fantastical", id: 975937182
-mas "Grammarly for Safari", id: 1462114288
-mas "Keynote", id: 409183694
 mas "Keystroke Pro", id: 1572206224
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "OneDrive", id: 823766827
-mas "Save to Pocket", id: 1477385213
 mas "Slack", id: 803453959
 mas "Theine", id: 955848755
 mas "Things", id: 904280696
