@@ -43,6 +43,7 @@
         "*/_site": true,
         "*/.quarto": true
     },
+    "search.quickOpen.includeSymbols": true,
     "terminal.external.osxExec": "Ghostty.app",
     "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.fontSize": 18,
