@@ -1,5 +1,6 @@
 {
     "console.fontSize": 18,
+    "dev.containers.enable": true,
     "editor.accessibilitySupport": "off",
     "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
