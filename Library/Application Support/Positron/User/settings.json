@@ -49,6 +49,7 @@
     "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.fontSize": 18,
     "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Ayu Mirage Bordered",
     "[python]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
