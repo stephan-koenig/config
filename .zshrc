@@ -56,6 +56,9 @@ function y() {
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+# Enable substitution of history expansion
+bindkey ' ' magic-space
+
 # Prevent tab completion from ~/.ssh/known_hosts
 zstyle ':completion:*:(ssh|scp|ftp|sftp):*' hosts $hosts
 
