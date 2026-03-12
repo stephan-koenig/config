@@ -25,6 +25,7 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "notebook.formatOnSave.enabled": true,
+    "positron.notebook.enabled": true,
     "projectManager.git.baseFolders": [
         "~/Documents/github"
     ],
