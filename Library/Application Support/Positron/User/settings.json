@@ -46,6 +46,15 @@
         "*/.quarto": true
     },
     "search.quickOpen.includeSymbols": true,
+    "spellright.configurationScope": "user",
+    "spellright.documentTypes": [
+        "latex",
+        "markdown",
+        "plaintext"
+    ],
+    "spellright.language": [
+        "en"
+    ],
     "terminal.external.osxExec": "Ghostty.app",
     "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.fontSize": 18,
