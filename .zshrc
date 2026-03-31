@@ -160,3 +160,6 @@ eval "$(_MARIMO_COMPLETE=zsh_source marimo)"
 
 # Atuin
 eval "$(atuin init zsh)"
+
+# Air R formatter and language server
+eval "$(air generate-shell-completion zsh)"
