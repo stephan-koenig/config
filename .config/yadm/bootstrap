@@ -62,14 +62,14 @@ ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1pass
 # echo 'Ensure the latest "gpg-agent" is running using "gpgconf --kill all".'
 
 echo 'Installing R and R packages...'
-rig add release && rig system setup-user-lib
+rig add --without-cran-mirror && rig system setup-user-lib
 Rscript $HOME/.R/setup_R.R
 
 echo 'Installing GitHub CLI and Quarto extensions...'
 gh extension install github/gh-copilot
 gh extension install github/gh-classroom
 quarto install tinytex
-quarto install chromium
+quarto install chrome-headless-shell
 
 echo 'Installing Python tools...'
 uv tool install ruff

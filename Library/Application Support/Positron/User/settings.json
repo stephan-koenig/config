@@ -26,6 +26,7 @@
     "files.trimTrailingWhitespace": true,
     "notebook.formatOnSave.enabled": true,
     "positron.notebook.enabled": true,
+    "positron.r.defaultRepositories": "posit-ppm",
     "projectManager.git.baseFolders": [
         "~/Documents/github"
     ],

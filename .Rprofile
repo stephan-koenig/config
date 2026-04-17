@@ -4,11 +4,7 @@ if (require(rlang, quietly = TRUE)) {
 
 # Use Posit Package Manager
 options(
-  repos = c(CRAN = "https://p3m.dev/cran/latest"),
-  renv.config.pak.enabled = TRUE,
-  renv.config.ppm.enabled = TRUE,
-  renv.config.ppm.default = TRUE,
-  renv.settings.ppm.enabled = TRUE,
+  repos = c(CRAN = "https://packagemanager.posit.co/cran/latest"),
   shiny.autoreload = TRUE,
   shiny.launch.browser = TRUE,
   warnPartialMatchArgs = TRUE,
@@ -23,9 +19,6 @@ if (interactive()) {
   suppressMessages(require(testthat))
   suppressMessages(require(usethis))
   options(
-    reprex.style         = TRUE,
-    rsthemes.theme_light = "base16 Unikitty Light {rsthemes}",
-    rsthemes.theme_dark  = "Night Owl {rsthemes}",
-    styler.cache_root    = "styler-perm"
+    reprex.style = TRUE
   )
 }
