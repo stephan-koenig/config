@@ -13,37 +13,35 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "23.11"; # Please read the comment before changing.
+  home.stateVersion = "25.11"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    act
-    antidote
+    # antidote
     direnv
-    fzf
-    gh
-    git
-    gnupg
-    helix
-    lazygit
-    lsd
-    mas
+    # fzf
+    # gh
+    # git
+    # helix
+    # lazygit
+    # lsd
+    # mas
     nix-direnv
     # quarto
     # R
-    tldr
-    tree
-    yadm
-    zoxide
-    zsh    
+    # tldr
+    # tree
+    # yadm
+    # zoxide
+    # zsh
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-    # 
+    #
     # (rWrapper.override { packages = with rPackages; [
     #       conflicted
     #       datapasta
@@ -66,7 +64,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
-  
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -83,9 +81,10 @@
   };
 
   # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. If you don't want to manage your shell through Home
-  # Manager then you have to manually source 'hm-session-vars.sh' located at
-  # either
+  # 'home.sessionVariables'. These will be explicitly sourced when using a
+  # shell provided by Home Manager. If you don't want to manage your shell
+  # through Home Manager then you have to manually source 'hm-session-vars.sh'
+  # located at either
   #
   #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   #
@@ -95,7 +94,7 @@
   #
   # or
   #
-  #  /etc/profiles/per-user/stephan/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/stephankoenig/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
@@ -108,10 +107,10 @@
       nix-direnv.enable = true;
     };
 
-    fzf = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    # fzf = {
+    #   enable = true;
+    #   enableZshIntegration = true;
+    # };
 
     # zsh.antidote = {
     #   enable = true;
@@ -122,15 +121,15 @@
     #     "zsh-users/zsh-syntax-highlighting"
     #   ];
     # };
-    
-    zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-      options = [
-        "--cmd cd"
-      ];
-    };
-    
+
+    # zoxide = {
+    #   enable = true;
+    #   enableZshIntegration = true;
+    #   options = [
+    #     "--cmd cd"
+    #   ];
+    # };
+
     # zsh.enable = true;
     # Let Home Manager install and manage itself.
     home-manager.enable = true;

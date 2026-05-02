@@ -50,6 +50,8 @@ Thumbs.db
 .httr-oauth
 .quarto
 
-# Dependencies directories #
-############################
+# Dependencies directories and symlinks #
+#########################################
 /env/
+/.direnv/
+/result
