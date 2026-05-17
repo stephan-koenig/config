@@ -25,6 +25,7 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "notebook.formatOnSave.enabled": true,
+    "plots.darkFilter": "auto",
     "positron.notebook.enabled": true,
     "positron.r.defaultRepositories": "posit-ppm",
     "projectManager.git.baseFolders": [
