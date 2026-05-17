@@ -14,3 +14,17 @@ args = ["server"]
 [[language]]
 name = "python"
 language-servers = ["ruff"]
+
+[[language]]
+name = "nix"
+auto-format = true
+formatter = { command = "nixfmt" }
+
+[language-server.nixd]
+command = "nixd"
+
+[language-server.nixd.config.nixpkgs]
+expr = "import <nixpkgs> { }"
+
+[language-server.nixd.config.options.home_manager]
+expr = "(builtins.getFlake \"~/.config/home-manager\").homeManagerModules.home-manager"

@@ -28,6 +28,8 @@
     # lsd
     # mas
     nix-direnv
+    nixd
+    nixfmt
     # quarto
     # R
     # tldr
