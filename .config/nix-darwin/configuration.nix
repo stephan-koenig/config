@@ -7,12 +7,19 @@
 {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = [
-    pkgs.vim
-  ];
+  environment.systemPackages = builtins.attrValues {
+    inherit (pkgs)
+      ghostty
+      git
+      raycast
+      ;
+  };
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
+
+  # The platform the configuration will be used on.
+  nixpkgs.hostPlatform = "aarch64-darwin";
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs.zsh.enable = true;
@@ -35,6 +42,6 @@
     # $ darwin-rebuild changelog
     stateVersion = 6;
   };
-  # The platform the configuration will be used on.
-  nixpkgs.hostPlatform = "aarch64-darwin";
+
+  users.users.stephankoenig.home = "/Users/stephankoenig";
 }
