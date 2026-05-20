@@ -96,6 +96,8 @@
     autosquash = true
     autoStash = true
     updateRefs = true
+[remote "origin"]
+	fetch = ^refs/heads/gh-pages
 [rerere]
     enabled = true
     autoupdate = true
