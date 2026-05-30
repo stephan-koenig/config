@@ -17,55 +17,57 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [
-    # antidote
-    direnv
-    # fzf
-    # gh
-    # git
-    # helix
-    # lazygit
-    # lsd
-    # mas
-    nix-direnv
-    nixd
-    nixfmt
-    # quarto
-    # R
-    # tldr
-    # tree
-    # yadm
-    # zoxide
-    # zsh
+  home.packages = builtins.attrValues {
+    inherit (pkgs)
+      # antidote
+      direnv
+      # fzf
+      # gh
+      # git
+      # helix
+      # lazygit
+      # lsd
+      # mas
+      nix-direnv
+      nixd
+      nixfmt
+      # quarto
+      # R
+      # tldr
+      # tree
+      # yadm
+      # zoxide
+      # zsh
 
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-    #
-    # (rWrapper.override { packages = with rPackages; [
-    #       conflicted
-    #       datapasta
-    #       devtools
-    #       lintr
-    #       quarto
-    #       reprex
-    #       styler
-    #       usethis
-    #       tidymodels
-    #       tidyverse
-    #     ];
-    #   }
-    # )
+      # # It is sometimes useful to fine-tune packages, for example, by applying
+      # # overrides. You can do that directly here, just don't forget the
+      # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
+      # # fonts?
+      # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+      #
+      # (rWrapper.override { packages = with rPackages; [
+      #       conflicted
+      #       datapasta
+      #       devtools
+      #       lintr
+      #       quarto
+      #       reprex
+      #       styler
+      #       usethis
+      #       tidymodels
+      #       tidyverse
+      #     ];
+      #   }
+      # )
 
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
-  ];
+      # # You can also create simple shell scripts directly inside your
+      # # configuration. For example, this adds a command 'my-hello' to your
+      # # environment:
+      # (pkgs.writeShellScriptBin "my-hello" ''
+      #   echo "Hello, ${config.home.username}!"
+      # '')
+      ;
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
