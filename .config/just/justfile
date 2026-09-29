@@ -56,3 +56,19 @@ run-prairielearn course='cpsc203':
     prairielearn/prairielearn
 
 alias pl := run-prairielearn
+
+# Copy local lab accessibility report to UBC CS web space
+[group('Update Quarto')]
+update-lab-accessibility-report:
+  scp -r ~/Documents/github/lab-access/_book/*  \
+    kokanee:~/public_html/lab-access
+
+alias ulab := update-lab-accessibility-report
+
+# Copy local DSCI program evaluation report to UBC CS web space
+[group('Update Quarto')]
+update-dsci-program-evaluation:
+  scp -r ~/Documents/github/dsci-program-evaluation/_site/*  \
+    kokanee:~/public_html/dsci-program-evaluation
+
+alias udsci := update-dsci-program-evaluation
