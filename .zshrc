@@ -163,3 +163,5 @@ eval "$(atuin init zsh)"
 
 # Air R formatter and language server
 eval "$(air generate-shell-completion zsh)"
+
+. "$HOME/.local/bin/rigenv"
