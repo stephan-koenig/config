@@ -86,5 +86,9 @@
     "[r]": {
         "editor.defaultFormatter": "Posit.air-vscode",
         "editor.formatOnSave": true
+    },
+    "[typst]": {
+        "editor.defaultFormatter": "myriad-dreamin.tinymist",
+        "editor.formatOnSave": true
     }
 }
