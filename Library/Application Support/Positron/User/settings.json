@@ -58,6 +58,14 @@
         "en"
     ],
     "terminal.external.osxExec": "Ghostty.app",
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.positron.openHelp",
+        "workbench.action.positron.toggleHistory",
+        "workbench.action.positron.togglePlots",
+        "workbench.action.positron.togglePreview",
+        "workbench.action.positron.toggleVariables",
+        "workbench.view.explorer"
+    ],
     "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.fontSize": 18,
     "window.autoDetectColorScheme": true,
